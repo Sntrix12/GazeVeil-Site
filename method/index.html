@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How we check | GazeVeil</title>
+<meta name="description" content="How GazeVeil checks a public website against India's DPDP Act: what it looks at, how it rates what it sees, what a finding means, and what it cannot see.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="../">GazeVeil</a>
+    <nav aria-label="Main">
+      <a href="../">Home</a>
+      <a href="./" aria-current="page">How we check</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <h1>How we check</h1>
+  <p class="tagline">What GazeVeil looks at, how it rates what it sees, and where it stops.</p>
+
+  <div class="note">
+    <p>Findings are not legal advice. They do not mean a website is, or is not, compliant with the law.</p>
+  </div>
+
+  <h2>What a check does</h2>
+  <p>GazeVeil loads a site's public pages the way an ordinary browser does, and reads the public DNS and TLS records for the domain. It then compares what it saw with the obligations in the Digital Personal Data Protection Act, 2023 and the DPDP Rules, 2025.</p>
+  <p>It does not log in, submit a form, or type into a field. It does not guess or list addresses, and it never uses a password or key it comes across. If a key is exposed on a public page, the report says that it is exposed. The key is never used.</p>
+  <p>The one thing it does besides reading is click a button that only reveals something on the page, such as a cookie or contact dialog. A visitor does the same, and nothing is sent.</p>
+  <p>When it recognises personal data on a page, it records only the type of data and how many were seen. The data itself is thrown away the moment it is recognised and is never saved.</p>
+
+  <h2>What the checks look at</h2>
+  <ul>
+    <li><strong>Cookies, trackers and consent.</strong> What the site sets or loads as a page opens, and what the cookie banner says and does.</li>
+    <li><strong>The privacy notice.</strong> Whether there is one, whether a visitor can find it, and which of the things the Act asks a notice to say it covers.</li>
+    <li><strong>Forms.</strong> Which forms ask for personal data, and what consent wording sits beside them. We read the form. We never fill it in.</li>
+    <li><strong>Exposed keys.</strong> Whether a secret key has been left in the code that every visitor's browser downloads. Keys that are meant to be public are not reported.</li>
+    <li><strong>Connection and domain.</strong> The site's DNS records, its TLS certificate and its security headers.</li>
+  </ul>
+
+  <h2>How findings are decided and rated</h2>
+  <p>Each check is a written rule, kept as a plain text file. A rule says what must be seen for it to apply, so the same page always gives the same findings. A language model does not decide which section of the Act applies. It is used only to put a finding into readable words, or to settle the wording of a notice that a plain keyword check could not.</p>
+  <p>Every finding carries two separate ratings:</p>
+  <ul>
+    <li><strong>Severity</strong> is the legal weight of the obligation. It comes from the Act.</li>
+    <li><strong>Confidence</strong> is how sure we are that the obligation was missed. It comes from what we saw on the page.</li>
+  </ul>
+  <p>A false alarm is worse than a missed finding, so we aim to report something only when the site's owner could not fairly say "that is supposed to be there". Where we cannot tell, we list it as <strong>Worth checking</strong>, say what we saw and what to look at, and do not count it as a finding.</p>
+  <p>A <em>finding</em> is one rule that applies, however many pages it appears on. Several findings can share a <em>root cause</em>, the single underlying failure behind them.</p>
+
+  <h2>The penalty range</h2>
+  <p>Reports show a range for the penalties the Act allows. It is a calibration, not a forecast. It is built from penalty orders that Indian regulators have made in comparable cases, because the Data Protection Board had issued no orders under this Act when the figures were set, and penalties under the Act were not yet in force.</p>
+  <p>Only the most serious category sets the range, and categories are never added together. The range grows with the number of separate root causes, and is capped at the maximum the Act allows. The size of the company changes the figure, but a public website does not show it, so a report works from the size band it is given. If the size is unknown the range is made wider and the report says our confidence is low.</p>
+  <p>The Act asks the Board to weigh things such as how serious the breach was and what the company did about it. A website check cannot see any of them, so each is left neutral. The range shows what regulators have done in comparable cases. It does not say what the Board will do.</p>
+
+  <h2>What a finding means, and what it does not</h2>
+  <ul>
+    <li>A finding means that, at the moment we looked, a public page showed something that does not meet an obligation, or that we could not confirm it meets it.</li>
+    <li>It does not mean the law has been broken, that a penalty will follow, or that the site is or is not compliant. Only the Board or a court can decide that.</li>
+    <li>No finding on a point does not mean the point is fine. It means we did not see a problem on the public side.</li>
+  </ul>
+
+  <h2>What we cannot see</h2>
+  <p>We can only see the public side of a site. A check made without permission does not run these, and a report lists them as not checked, with the reason:</p>
+  <ul>
+    <li>Screens that exist only behind a login.</li>
+    <li>Things that depend on how a company works inside, such as how long data is kept, how fast requests to see or delete data are answered, or how passwords are stored.</li>
+    <li>Whether a server holds files or settings that the site does not link to. Looking for those means asking a server for addresses a visitor would not normally ask for, so we do it only for a site owner who has given us written permission.</li>
+    <li>A few checks that are not built yet.</li>
+  </ul>
+  <p>With the owner's written permission a deeper check is possible. It is limited to what the permission says, and the report records what was done and what was skipped.</p>
+
+  <div class="contact">
+    <p><a href="../">Back to the home page</a></p>
+    <p>Questions about the method: <a href="mailto:shreeya@gazeveil.com">shreeya@gazeveil.com</a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p>GazeVeil, Mumbai, India. This is not legal advice.</p>
+  </div>
+</footer>
+</body>
+</html>
