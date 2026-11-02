@@ -1,85 +1,261 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How we check | GazeVeil</title>
-<meta name="description" content="How GazeVeil checks a public website against India's DPDP Act: what it looks at, how it rates what it sees, what a finding means, and what it cannot see.">
+<meta name="description" content="How GazeVeil checks a public website against India's DPDP Act: the steps, what each check looks at, how findings are rated, what a finding means, and what we cannot see.">
+<meta name="theme-color" content="#07090d">
+<link rel="canonical" href="https://gazeveil.com/method/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GazeVeil">
+<meta property="og:title" content="How we check | GazeVeil">
+<meta property="og:description" content="The method behind every GazeVeil report: public pages only, written rules, and plain limits.">
+<meta property="og:url" content="https://gazeveil.com/method/">
+<meta property="og:image" content="https://gazeveil.com/assets/og-1200x630.png">
+<meta property="og:image:alt" content="The GazeVeil eye logo beside the line: Privacy checks for websites under India's DPDP Act.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="../assets/site.js" defer></script>
 </head>
 <body>
-<header>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
   <div class="wrap">
-    <a class="brand" href="../">GazeVeil</a>
-    <nav aria-label="Main">
-      <a href="../">Home</a>
-      <a href="./" aria-current="page">How we check</a>
+    <a class="brand" href="../" aria-label="GazeVeil home">
+      <img src="../assets/logo-mark.svg" alt="" width="34" height="34">
+      <span>Gaze<span class="veil">Veil</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-sm" href="../#checks">What we check</a>
+      <a class="hide-sm" href="../#how">How it works</a>
+      <a href="./" aria-current="page">Method</a>
+      <a class="btn btn-sm" href="mailto:shreeya@gazeveil.com?subject=Free%20sample%20report%20request&amp;body=Hi%20Shreeya%2C%0A%0APlease%20send%20a%20free%20sample%20report%20for%20this%20website%3A%20">Free report</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
-  <h1>How we check</h1>
-  <p class="tagline">What GazeVeil looks at, how it rates what it sees, and where it stops.</p>
 
-  <div class="note">
-    <p>Findings are not legal advice. They do not mean a website is, or is not, compliant with the law.</p>
-  </div>
+<main id="main">
 
-  <h2>What a check does</h2>
-  <p>GazeVeil loads a site's public pages the way an ordinary browser does, and reads the public DNS and TLS records for the domain. It then compares what it saw with the obligations in the Digital Personal Data Protection Act, 2023 and the DPDP Rules, 2025.</p>
-  <p>It does not log in, submit a form, or type into a field. It does not guess or list addresses, and it never uses a password or key it comes across. If a key is exposed on a public page, the report says that it is exposed. The key is never used.</p>
-  <p>The one thing it does besides reading is click a button that only reveals something on the page, such as a cookie or contact dialog. A visitor does the same, and nothing is sent.</p>
-  <p>When it recognises personal data on a page, it records only the type of data and how many were seen. The data itself is thrown away the moment it is recognised and is never saved.</p>
-
-  <h2>What the checks look at</h2>
-  <ul>
-    <li><strong>Cookies, trackers and consent.</strong> What the site sets or loads as a page opens, and what the cookie banner says and does.</li>
-    <li><strong>The privacy notice.</strong> Whether there is one, whether a visitor can find it, and which of the things the Act asks a notice to say it covers.</li>
-    <li><strong>Forms.</strong> Which forms ask for personal data, and what consent wording sits beside them. We read the form. We never fill it in.</li>
-    <li><strong>Exposed keys.</strong> Whether a secret key has been left in the code that every visitor's browser downloads. Keys that are meant to be public are not reported.</li>
-    <li><strong>Connection and domain.</strong> The site's DNS records, its TLS certificate and its security headers.</li>
-  </ul>
-
-  <h2>How findings are decided and rated</h2>
-  <p>Each check is a written rule, kept as a plain text file. A rule says what must be seen for it to apply, so the same page always gives the same findings. A language model does not decide which section of the Act applies. It is used only to put a finding into readable words, or to settle the wording of a notice that a plain keyword check could not.</p>
-  <p>Every finding carries two separate ratings:</p>
-  <ul>
-    <li><strong>Severity</strong> is the legal weight of the obligation. It comes from the Act.</li>
-    <li><strong>Confidence</strong> is how sure we are that the obligation was missed. It comes from what we saw on the page.</li>
-  </ul>
-  <p>A false alarm is worse than a missed finding, so we aim to report something only when the site's owner could not fairly say "that is supposed to be there". Where we cannot tell, we list it as <strong>Worth checking</strong>, say what we saw and what to look at, and do not count it as a finding.</p>
-  <p>A <em>finding</em> is one rule that applies, however many pages it appears on. Several findings can share a <em>root cause</em>, the single underlying failure behind them.</p>
-
-  <h2>The penalty range</h2>
-  <p>Reports show a range for the penalties the Act allows. It is a calibration, not a forecast. It is built from penalty orders that Indian regulators have made in comparable cases, because the Data Protection Board had issued no orders under this Act when the figures were set, and penalties under the Act were not yet in force.</p>
-  <p>Only the most serious category sets the range, and categories are never added together. The range grows with the number of separate root causes, and is capped at the maximum the Act allows. The size of the company changes the figure, but a public website does not show it, so a report works from the size band it is given. If the size is unknown the range is made wider and the report says our confidence is low.</p>
-  <p>The Act asks the Board to weigh things such as how serious the breach was and what the company did about it. A website check cannot see any of them, so each is left neutral. The range shows what regulators have done in comparable cases. It does not say what the Board will do.</p>
-
-  <h2>What a finding means, and what it does not</h2>
-  <ul>
-    <li>A finding means that, at the moment we looked, a public page showed something that does not meet an obligation, or that we could not confirm it meets it.</li>
-    <li>It does not mean the law has been broken, that a penalty will follow, or that the site is or is not compliant. Only the Board or a court can decide that.</li>
-    <li>No finding on a point does not mean the point is fine. It means we did not see a problem on the public side.</li>
-  </ul>
-
-  <h2>What we cannot see</h2>
-  <p>We can only see the public side of a site. A check made without permission does not run these, and a report lists them as not checked, with the reason:</p>
-  <ul>
-    <li>Screens that exist only behind a login.</li>
-    <li>Things that depend on how a company works inside, such as how long data is kept, how fast requests to see or delete data are answered, or how passwords are stored.</li>
-    <li>Whether a server holds files or settings that the site does not link to. Looking for those means asking a server for addresses a visitor would not normally ask for, so we do it only for a site owner who has given us written permission.</li>
-    <li>A few checks that are not built yet.</li>
-  </ul>
-  <p>With the owner's written permission a deeper check is possible. It is limited to what the permission says, and the report records what was done and what was skipped.</p>
-
-  <div class="contact">
-    <p><a href="../">Back to the home page</a></p>
-    <p>Questions about the method: <a href="mailto:shreeya@gazeveil.com">shreeya@gazeveil.com</a></p>
-  </div>
-</main>
-<footer>
+<section class="page-hero dark" aria-labelledby="page-title">
   <div class="wrap">
-    <p>GazeVeil, Mumbai, India. This is not legal advice.</p>
+    <p class="eyebrow">Methodology version 1.0</p>
+    <h1 id="page-title">How we check</h1>
+    <p class="lede">What GazeVeil looks at, how it rates what it sees, and where it stops. Every GazeVeil report links to this page.</p>
+    <div class="note">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+      <p>Findings are not legal advice. They are not a verdict on whether a website meets the law, either way.</p>
+    </div>
+    <ul class="toc" aria-label="On this page">
+      <li><a href="#steps">The steps</a></li>
+      <li><a href="#checks">What we look at</a></li>
+      <li><a href="#rating">How findings are rated</a></li>
+      <li><a href="#estimate">The penalty range</a></li>
+      <li><a href="#meaning">What a finding means</a></li>
+      <li><a href="#limits">What we can't see</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- The steps ----------------------------------------------------------------->
+<section class="section" id="steps" aria-labelledby="steps-title">
+  <div class="wrap narrow">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">The steps</p>
+      <h2 id="steps-title">What a check does, in order</h2>
+      <p class="lede">Only public pages, and only what an ordinary browser does, plus public DNS and certificate lookups.</p>
+    </div>
+
+    <ol class="rail" data-reveal>
+      <li style="--i:0">
+        <div class="knot"><svg viewBox="0 0 26 26" aria-hidden="true" focusable="false"><rect x="2.5" y="4" width="21" height="18" rx="3"/><path d="M2.5 9h21"/></svg></div>
+        <div class="body"><span class="num">STEP 1</span><h3>Load your public pages</h3><p>A real browser opens your site the way a visitor's would, and follows the links on it to your other public pages.</p></div>
+      </li>
+      <li style="--i:1">
+        <div class="knot"><svg viewBox="0 0 26 26" aria-hidden="true" focusable="false"><circle cx="13" cy="13" r="9.5"/><path d="M3.5 13h19M13 3.5c3 3 3 16 0 19M13 3.5c-3 3-3 16 0 19"/></svg></div>
+        <div class="body"><span class="num">STEP 2</span><h3>Read the public records</h3><p>The public DNS records and the TLS (https) certificate for your domain, and the security settings your pages send to browsers.</p></div>
+      </li>
+      <li style="--i:2">
+        <div class="knot"><svg viewBox="0 0 26 26" aria-hidden="true" focusable="false"><path d="M6 4l13 7.5-6 1.8L10.5 20z"/></svg></div>
+        <div class="body"><span class="num">STEP 3</span><h3>Open only what reveals something</h3><p>It may click a button that only shows something already on the page, such as a contact dialog. A visitor does the same and nothing is sent. It never clicks anything that submits, and never types into a field.</p></div>
+      </li>
+      <li style="--i:3">
+        <div class="knot"><svg viewBox="0 0 26 26" aria-hidden="true" focusable="false"><path d="M4 7h18M4 13h12M4 19h7"/><circle cx="19.5" cy="18.5" r="3.5"/></svg></div>
+        <div class="body"><span class="num">STEP 4</span><h3>Count personal data, never keep it</h3><p>When it recognises personal data on a page, it records only the type of data and how many it saw. The data itself is thrown away the moment it is recognised.</p></div>
+      </li>
+      <li style="--i:4">
+        <div class="knot"><svg viewBox="0 0 26 26" aria-hidden="true" focusable="false"><path d="M7 3.5h12v19H7z"/><path d="M10 8.5h6M10 12.5h6M10 16.5h3.5"/></svg></div>
+        <div class="body"><span class="num">STEP 5</span><h3>Apply written rules</h3><p>Each rule ties what was seen to an obligation in the DPDP Act, 2023 or the DPDP Rules, 2025. The rules are plain text files, so the same page always gives the same findings.</p></div>
+      </li>
+      <li style="--i:5">
+        <div class="knot"><svg viewBox="0 0 26 26" aria-hidden="true" focusable="false"><path d="M7 3.5h9l4 4v15H7z"/><path d="M16 3.5v4h4"/><path d="M10 13l2.2 2.2L17 10.5"/></svg></div>
+        <div class="body"><span class="num">STEP 6</span><h3>Write the report</h3><p>In plain English: what's wrong, why it matters, where we saw it, what's already fine, and what the check couldn't see.</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- What we look at ----------------------------------------------------------->
+<section class="section" id="checks" aria-labelledby="checks-title">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">What we look at</p>
+      <h2 id="checks-title">Each type of check, in plain words</h2>
+    </div>
+    <div class="cards">
+      <article class="card" data-reveal>
+        <div class="icon"><svg viewBox="0 0 30 30" aria-hidden="true" focusable="false"><circle class="fill" cx="15" cy="15" r="3"/><circle class="i-ripple" cx="15" cy="15" r="8"/><circle class="i-ripple d2" cx="15" cy="15" r="8"/></svg></div>
+        <h3>Cookies, trackers and consent</h3>
+        <p>What your pages load and set as they open, before anyone clicks: analytics, advertising and session-recording tools, and the cookies they set. Also whether personal details end up in web addresses sent to those tools.</p>
+      </article>
+      <article class="card" data-reveal>
+        <div class="icon"><svg viewBox="0 0 30 30" aria-hidden="true" focusable="false"><rect x="3" y="7" width="24" height="16" rx="3"/><rect class="fill" x="6.5" y="15.5" width="7.5" height="4" rx="2"/><rect class="i-blink" x="16" y="15.5" width="7.5" height="4" rx="2" stroke-dasharray="2 1.6"/><path d="M7 11.5h12"/></svg></div>
+        <h3>The cookie banner</h3>
+        <p>Whether there is one where it is needed, and whether saying no is as easy as saying yes.</p>
+      </article>
+      <article class="card" data-reveal>
+        <div class="icon"><svg viewBox="0 0 30 30" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="23" height="20" rx="3"/><rect x="7" y="9" width="16" height="3.6" rx="1.4"/><path class="i-draw" d="M8 19l2.5 2.5L15 17"/></svg></div>
+        <h3>Forms and tick boxes</h3>
+        <p>Which forms ask for personal details, whether they send them over a secure connection, whether consent boxes are already ticked, and whether they link to your privacy notice. We read the form. We never fill it in.</p>
+      </article>
+      <article class="card" data-reveal>
+        <div class="icon"><svg viewBox="0 0 30 30" aria-hidden="true" focusable="false"><path d="M8 3.5h10l5 5v18H8z"/><path d="M11.5 12h7M11.5 16h5"/><g class="i-sweep"><circle cx="19.5" cy="20.5" r="3.6"/><path d="M22.2 23.2l3.3 3.3"/></g></svg></div>
+        <h3>The privacy notice</h3>
+        <p>Whether there is one, whether a visitor can find it, and which of the things the Act asks a notice to say it covers, such as who to complain to, a contact for privacy questions, and how people can see, correct and delete their data.</p>
+      </article>
+      <article class="card" data-reveal>
+        <div class="icon"><svg viewBox="0 0 30 30" aria-hidden="true" focusable="false"><path d="M15 3.5l9.5 3.5v7c0 6-4 10.3-9.5 12-5.5-1.7-9.5-6-9.5-12V7z"/><path class="i-bob" d="M10.5 15l3.2 3.2 5.8-6"/></svg></div>
+        <h3>Connection and security settings</h3>
+        <p>Your TLS certificate and https, and the standard security settings browsers use to protect visitors, such as HSTS.</p>
+      </article>
+      <article class="card" data-reveal>
+        <div class="icon"><svg viewBox="0 0 30 30" aria-hidden="true" focusable="false"><circle cx="10" cy="15" r="5"/><path d="M15 15h11M22 15v4M26 15v3"/></svg></div>
+        <h3>Exposed keys</h3>
+        <p>Secret keys left in the code every visitor's browser downloads. We report that a key is exposed and never use it. Keys that are meant to be public, such as an analytics ID, are not reported.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- How findings are rated ---------------------------------------------------->
+<section class="section" id="rating" aria-labelledby="rating-title">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">How findings are rated</p>
+      <h2 id="rating-title">Two separate ratings, never mixed</h2>
+      <p class="lede">How much an obligation matters and how sure we are that it was missed are different questions, so every finding answers both.</p>
+    </div>
+    <div class="two">
+      <article class="panel" data-reveal>
+        <span class="tag tag-bad">Severity</span>
+        <h3>How much it matters</h3>
+        <p>The legal weight of the obligation. It comes from the Act, not from us.</p>
+        <div class="meter warm" aria-hidden="true"><span class="on"></span><span class="on"></span><span class="on"></span><span></span></div>
+      </article>
+      <article class="panel" data-reveal>
+        <span class="tag tag-good">Confidence</span>
+        <h3>How sure we are</h3>
+        <p>How sure we are that the obligation was missed. It comes from what we saw on the page.</p>
+        <div class="meter" aria-hidden="true"><span class="on"></span><span class="on"></span><span></span><span></span></div>
+      </article>
+    </div>
+    <div class="prose" data-reveal>
+      <div class="callout"><p><strong>Worth checking.</strong> A false alarm is worse than a missed finding. We report something only when the site's owner couldn't fairly say “that's supposed to be there”. When we can't tell from the page alone, we list it as worth checking, say what we saw, and don't count it as a problem.</p></div>
+      <h3>A finding and a root cause</h3>
+      <p>A <strong>finding</strong> is one rule that applies, however many pages it appears on. Several findings can share a <strong>root cause</strong>, the single underlying failure behind them, and are counted once.</p>
+      <h3>Where a language model fits</h3>
+      <p>A language model never decides which part of the Act applies. When we turn one on, it is used only to put a finding into readable words, or to settle the wording of a notice that a plain keyword check couldn't. Every report says whether one was used.</p>
+    </div>
+  </div>
+</section>
+
+<!-- The penalty range --------------------------------------------------------->
+<section class="section" id="estimate" aria-labelledby="estimate-title">
+  <div class="wrap narrow">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">The penalty range</p>
+      <h2 id="estimate-title">An estimate, not a forecast</h2>
+    </div>
+    <div class="prose" data-reveal>
+      <p>Each report shows a possible penalty range. It is built from penalty orders Indian regulators have made in comparable cases. The Data Protection Board has issued no orders under the Act, and penalties can't start before 13 May 2027.</p>
+      <p>Only the most serious category of finding sets the range. Categories are never added together. The range grows with the number of separate root causes, and never goes above the maximum the Act allows. Only findings we are highly confident about count towards it.</p>
+      <p>Company size changes the figure, but a website doesn't show it. When size is unknown, the range is made wider and the report says our confidence is low.</p>
+      <p>The Act asks the Board to weigh things a website can't show, such as how serious a breach was and what the company did about it. Each of those is left neutral. The range shows what regulators have done in comparable cases. It does not say what the Board will do.</p>
+    </div>
+  </div>
+</section>
+
+<!-- What a finding means ------------------------------------------------------>
+<section class="section" id="meaning" aria-labelledby="meaning-title">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">What a finding means</p>
+      <h2 id="meaning-title">What it says, and what it doesn't</h2>
+    </div>
+    <div class="two">
+      <article class="panel" data-reveal>
+        <span class="tag tag-good">A finding means</span>
+        <ul class="ticks">
+          <li>When we looked, a public page showed something that doesn't meet an obligation, or that we couldn't confirm meets it.</li>
+          <li>We can show where we saw it.</li>
+          <li>The same page would give the same finding again.</li>
+        </ul>
+      </article>
+      <article class="panel" data-reveal>
+        <span class="tag tag-bad">A finding does not mean</span>
+        <ul class="ticks cross">
+          <li>That the law has been broken. Only the Board or a court can decide that.</li>
+          <li>That a penalty will follow.</li>
+          <li>That anything we didn't flag is fine. It only means we didn't see a problem on the public side.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Limits -------------------------------------------------------------------->
+<section class="section" id="limits" aria-labelledby="limits-title">
+  <div class="wrap narrow">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Limits</p>
+      <h2 id="limits-title">We can only see the public side of a site</h2>
+      <p class="lede">A check made without permission doesn't cover these. Every report lists them as not checked, with the reason.</p>
+    </div>
+    <div class="prose" data-reveal>
+      <ul>
+        <li><strong>Things behind a login,</strong> such as whether users can delete their account or download their data.</li>
+        <li><strong>Things inside your company,</strong> such as how long you keep data, how fast you answer requests to see or delete it, and how passwords are stored.</li>
+        <li><strong>Files and settings your site doesn't link to.</strong> Looking for those means asking your server for addresses a visitor wouldn't ask for, so we do it only with written permission.</li>
+        <li><strong>A few checks we haven't built yet.</strong></li>
+      </ul>
+      <div class="callout"><p><strong>With your written permission</strong> we can check what a visitor can't see, such as hidden files on your server, your database's access settings and your file storage. The check stays within what the permission allows, and the report logs every action we took and anything we skipped.</p></div>
+    </div>
+
+    <p style="margin-top:3rem"><a class="back" href="../"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M16 10H5M9 5l-5 5 5 5"/></svg>Back to home</a></p>
+    <p class="muted">Questions about the method? <a href="mailto:shreeya@gazeveil.com">shreeya@gazeveil.com</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="../" aria-label="GazeVeil home">
+        <img src="../assets/logo-mark.svg" alt="" width="34" height="34">
+        <span>Gaze<span class="veil">Veil</span></span>
+      </a>
+      <p class="legal">GazeVeil points out issues it can see on a public website. It is not legal advice.</p>
+      <p class="where">Mumbai, India</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../">Home</a></li>
+      <li><a href="../#faq">Questions</a></li>
+      <li><a href="mailto:shreeya@gazeveil.com">shreeya@gazeveil.com</a></li>
+    </ul>
   </div>
 </footer>
 </body>

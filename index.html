@@ -1,52 +1,421 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GazeVeil: passive website checks for India's DPDP Act</title>
-<meta name="description" content="GazeVeil looks only at what any visitor can already see on a public website, such as cookie banners, privacy notices and consent wording, and sends a short plain-language PDF report.">
+<title>GazeVeil: privacy checks for websites under India's DPDP Act</title>
+<meta name="description" content="GazeVeil checks what any visitor can see on your website and shows the privacy gaps under India's DPDP Act, in plain English. Free sample report.">
+<meta name="theme-color" content="#07090d">
+<link rel="canonical" href="https://gazeveil.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GazeVeil">
+<meta property="og:title" content="See your website the way a regulator would.">
+<meta property="og:description" content="Privacy checks for websites under India's DPDP Act, in plain English.">
+<meta property="og:url" content="https://gazeveil.com/">
+<meta property="og:image" content="https://gazeveil.com/assets/og-1200x630.png">
+<meta property="og:image:alt" content="The GazeVeil eye logo beside the line: Privacy checks for websites under India's DPDP Act.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="assets/site.js" defer></script>
 </head>
 <body>
-<header>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
   <div class="wrap">
-    <a class="brand" href="./">GazeVeil</a>
-    <nav aria-label="Main">
-      <a href="./">Home</a>
-      <a href="method/">How we check</a>
+    <a class="brand" href="./" aria-label="GazeVeil home">
+      <img src="assets/logo-mark.svg" alt="" width="34" height="34">
+      <span>Gaze<span class="veil">Veil</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-sm" href="#checks">What we check</a>
+      <a class="hide-sm" href="#how">How it works</a>
+      <a href="method/">Method</a>
+      <a class="btn btn-sm" href="mailto:shreeya@gazeveil.com?subject=Free%20sample%20report%20request&amp;body=Hi%20Shreeya%2C%0A%0APlease%20send%20a%20free%20sample%20report%20for%20this%20website%3A%20">Free report</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
-  <h1>GazeVeil</h1>
-  <p class="tagline">Passive website checks for India's DPDP Act.</p>
 
-  <h2>What we do</h2>
-  <p>We look only at what any visitor can already see on a public website, such as cookie banners, privacy notices, consent wording and how forms collect data. We send you a short PDF report in plain language.</p>
+<main id="main">
 
-  <h2>What you get</h2>
-  <ul>
-    <li>A free sample report.</li>
-    <li>A detailed report with fix steps, which we only do with the site owner's written permission.</li>
-  </ul>
+<!-- 1. Hero ------------------------------------------------------------------>
+<section class="hero dark" aria-labelledby="hero-title">
+  <svg class="veil-lines" viewBox="0 0 1440 700" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path d="M-80 180C160 120 360 260 620 200S1100 120 1520 210"/>
+    <path d="M-80 420C200 360 420 500 700 430S1180 360 1520 450"/>
+    <path d="M-80 620C240 560 520 690 820 610S1240 560 1520 640"/>
+  </svg>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Privacy checks for India's DPDP Act</p>
+      <h1 id="hero-title">See your website <span class="grad-text">the way a regulator would.</span></h1>
+      <p class="sub">GazeVeil checks what any visitor can see on your website and shows the privacy gaps under India's DPDP Act, in plain English.</p>
+      <div class="hero-actions">
+        <a class="btn" href="mailto:shreeya@gazeveil.com?subject=Free%20sample%20report%20request&amp;body=Hi%20Shreeya%2C%0A%0APlease%20send%20a%20free%20sample%20report%20for%20this%20website%3A%20">
+          Get a free sample report
+          <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#how">How it works</a>
+      </div>
+      <ul class="promises" aria-label="What a free check involves">
+        <li>No login</li>
+        <li>No access to your systems</li>
+        <li>Plain-English PDF</li>
+      </ul>
+    </div>
 
-  <h2>What we do not do</h2>
-  <ul>
-    <li>We never log in, and we never guess passwords.</li>
-    <li>We never touch your systems or probe for weaknesses unless you have given us written permission for a deeper check.</li>
-    <li>We do not say a website is "compliant".</li>
-    <li>This is not legal advice.</li>
-  </ul>
-  <p>You can read exactly what we look at, and how we rate what we see, on the <a href="method/">How we check</a> page.</p>
-
-  <div class="contact">
-    <h2 style="margin-top:0">Contact</h2>
-    <p><a href="mailto:shreeya@gazeveil.com">shreeya@gazeveil.com</a></p>
+    <div class="hero-art" aria-hidden="true">
+      <span class="ring"></span><span class="ring r2"></span><span class="ring r3"></span>
+      <span class="scan"></span>
+      <svg class="eye" data-eye viewBox="0 0 64 64" focusable="false">
+        <defs>
+          <radialGradient id="h-iris" cx="42%" cy="38%" r="70%">
+            <stop offset="0" stop-color="#b9fde9"/>
+            <stop offset=".42" stop-color="#3df0b8"/>
+            <stop offset="1" stop-color="#0b8f7d"/>
+          </radialGradient>
+          <linearGradient id="h-veil" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#07090d" stop-opacity=".97"/>
+            <stop offset="1" stop-color="#07090d" stop-opacity=".25"/>
+          </linearGradient>
+          <clipPath id="h-eye"><path d="M5 32C16.5 14.5 47.5 14.5 59 32 47.5 49.5 16.5 49.5 5 32Z"/></clipPath>
+        </defs>
+        <g clip-path="url(#h-eye)">
+          <rect width="64" height="64" fill="#0b1118"/>
+          <g data-pupil>
+            <circle cx="32" cy="33" r="11.5" fill="url(#h-iris)"/>
+            <circle cx="32" cy="33" r="8.6" fill="none" stroke="#04130e" stroke-opacity=".35" stroke-width=".5" stroke-dasharray=".5 1.1"/>
+            <circle cx="32" cy="33" r="6.6" fill="none" stroke="#e9fff8" stroke-opacity=".35" stroke-width=".3"/>
+            <circle cx="32" cy="33" r="4.8" fill="#04130e"/>
+            <circle cx="28.6" cy="29.4" r="1.9" fill="#fff" fill-opacity=".92"/>
+            <circle cx="35" cy="36.2" r=".8" fill="#fff" fill-opacity=".5"/>
+          </g>
+          <g class="veil-edge">
+            <path d="M0 0H64V30.5H59C50 27 42 27.5 32 30.5C22 33.5 14 27 5 30.5H0Z" fill="url(#h-veil)"/>
+            <path d="M5 30.5C14 27 22 33.5 32 30.5S50 27 59 30.5" fill="none" stroke="#3df0b8" stroke-width=".7" stroke-opacity=".9"/>
+            <path d="M5 26.5C14 23 22 29.5 32 26.5S50 23 59 26.5" fill="none" stroke="#3df0b8" stroke-width=".35" stroke-opacity=".35"/>
+          </g>
+          <rect class="lid" x="0" y="14" width="64" height="36" fill="#0b1118"/>
+        </g>
+        <path d="M5 32C16.5 14.5 47.5 14.5 59 32 47.5 49.5 16.5 49.5 5 32Z" fill="none" stroke="#3df0b8" stroke-width="1.5" stroke-linejoin="round"/>
+      </svg>
+    </div>
   </div>
-</main>
-<footer>
+</section>
+
+<!-- 2. Timeline -------------------------------------------------------------->
+<section class="section" id="timeline" aria-labelledby="timeline-title">
   <div class="wrap">
-    <p>GazeVeil, Mumbai, India.</p>
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">The first few seconds</p>
+      <h2 id="timeline-title">What happens when someone opens your website</h2>
+      <p class="lede">A lot happens before a visitor has decided anything. The order matters: under the DPDP Act, tracking needs a clear yes first.</p>
+    </div>
+
+    <div class="lanes" data-reveal>
+      <article class="lane lane-bad" aria-labelledby="lane-bad-title">
+        <span class="tag tag-bad">The problem</span>
+        <h3 id="lane-bad-title">Trackers fire before the click</h3>
+        <ol class="tl">
+          <li class="ev" style="--i:0"><span class="dot"></span><strong>Page loads</strong><span class="sub">A visitor arrives.</span></li>
+          <li class="ev ev-fire" style="--i:1"><span class="dot"></span><strong>Trackers fire</strong>
+            <span class="chips"><span class="chip">analytics-script</span><span class="chip">ad-pixel</span><span class="chip">session-recorder</span></span>
+            <span class="sub">Cookies are set. Nobody has said yes.</span></li>
+          <li class="ev" style="--i:2"><span class="dot"></span><strong>Cookie banner appears</strong><span class="sub">It asks a question that has already been answered for them.</span></li>
+          <li class="consent" style="--i:3"><span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 2l9 5-4 1.2L6.5 13z" fill="currentColor"/></svg>Visitor clicks</span></li>
+          <li class="ev ev-late" style="--i:4"><span class="dot"></span><strong>Too late</strong><span class="sub">The tracking already happened, whatever they choose.</span></li>
+        </ol>
+      </article>
+
+      <article class="lane lane-good" aria-labelledby="lane-good-title">
+        <span class="tag tag-good">The right way</span>
+        <h3 id="lane-good-title">Trackers wait for a yes</h3>
+        <ol class="tl">
+          <li class="ev" style="--i:0"><span class="dot"></span><strong>Page loads</strong><span class="sub">A visitor arrives. Nothing tracks them yet.</span></li>
+          <li class="ev" style="--i:1"><span class="dot"></span><strong>Cookie banner appears</strong><span class="sub">“Accept” and “Reject”, equally easy to press.</span></li>
+          <li class="consent" style="--i:2"><span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 2l9 5-4 1.2L6.5 13z" fill="currentColor"/></svg>Visitor clicks “Accept”</span></li>
+          <li class="ev ev-fire ev-ok" style="--i:3"><span class="dot"></span><strong>Trackers fire</strong>
+            <span class="chips"><span class="chip">analytics-script</span><span class="chip">ad-pixel</span><span class="chip">session-recorder</span></span>
+            <span class="sub">Only after a yes. If they click “Reject”, these never load.</span></li>
+        </ol>
+      </article>
+    </div>
+    <p class="caption">The tracker names are generic examples. GazeVeil sees which of these happen by watching what your pages load and set before anyone clicks anything.</p>
+  </div>
+</section>
+
+<!-- 3. What we look for ------------------------------------------------------>
+<section class="section" id="checks" aria-labelledby="checks-title">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">What we look for</p>
+      <h2 id="checks-title">The gaps a visitor's browser can already see</h2>
+      <p class="lede">Each check is a written rule tied to the DPDP Act, 2023 or the DPDP Rules, 2025. If we can't tell for sure, we say so instead of guessing.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card" data-reveal>
+        <div class="icon"><svg viewBox="0 0 30 30" aria-hidden="true" focusable="false">
+          <circle class="fill" cx="15" cy="15" r="3"/>
+          <circle class="i-ripple" cx="15" cy="15" r="8"/>
+          <circle class="i-ripple d2" cx="15" cy="15" r="8"/>
+        </svg></div>
+        <h3>Tracking before consent</h3>
+        <p>Analytics, advertising and session-recording tools that load, or set cookies, before a visitor has said yes.</p>
+      </article>
+
+      <article class="card" data-reveal>
+        <div class="icon"><svg viewBox="0 0 30 30" aria-hidden="true" focusable="false">
+          <rect x="3" y="7" width="24" height="16" rx="3"/>
+          <rect class="fill" x="6.5" y="15.5" width="7.5" height="4" rx="2"/>
+          <rect class="i-blink" x="16" y="15.5" width="7.5" height="4" rx="2" stroke-dasharray="2 1.6"/>
+          <path d="M7 11.5h12"/>
+        </svg></div>
+        <h3>No real way to say no</h3>
+        <p>A cookie banner with an “Accept” button but no equally easy way to reject.</p>
+      </article>
+
+      <article class="card" data-reveal>
+        <div class="icon"><svg viewBox="0 0 30 30" aria-hidden="true" focusable="false">
+          <rect x="5" y="5" width="20" height="20" rx="4"/>
+          <path class="i-draw" d="M10 15.5l3.5 3.5L20.5 11"/>
+        </svg></div>
+        <h3>Pre-ticked boxes</h3>
+        <p>Consent boxes on your forms that are already ticked before the visitor touches them.</p>
+      </article>
+
+      <article class="card" data-reveal>
+        <div class="icon"><svg viewBox="0 0 30 30" aria-hidden="true" focusable="false">
+          <path d="M8 3.5h10l5 5v18H8z"/>
+          <path d="M11.5 12h7M11.5 16h5"/>
+          <g class="i-sweep"><circle cx="19.5" cy="20.5" r="3.6"/><path d="M22.2 23.2l3.3 3.3"/></g>
+        </svg></div>
+        <h3>The privacy notice</h3>
+        <p>Whether you have one, whether visitors can find it, and whether it says what the Act asks, such as how to complain and how people can see, correct and delete their data.</p>
+      </article>
+
+      <article class="card" data-reveal>
+        <div class="icon"><svg viewBox="0 0 30 30" aria-hidden="true" focusable="false">
+          <rect x="3.5" y="5" width="23" height="20" rx="3"/>
+          <rect x="7" y="9" width="16" height="3.6" rx="1.4"/>
+          <rect x="7" y="15" width="16" height="3.6" rx="1.4"/>
+          <path class="i-scan" d="M5 12.8h20" stroke-opacity=".6"/>
+        </svg></div>
+        <h3>How forms collect data</h3>
+        <p>Which forms ask for personal details, whether they send them over a secure connection, and what consent wording and links sit beside them. We read forms. We never fill them in.</p>
+      </article>
+
+      <article class="card" data-reveal>
+        <div class="icon"><svg viewBox="0 0 30 30" aria-hidden="true" focusable="false">
+          <path d="M15 3.5l9.5 3.5v7c0 6-4 10.3-9.5 12-5.5-1.7-9.5-6-9.5-12V7z"/>
+          <path class="i-bob" d="M10.5 15l3.2 3.2 5.8-6"/>
+        </svg></div>
+        <h3>Basic security settings</h3>
+        <p>A secure https connection, the standard security settings browsers use to protect visitors, and secret keys left in code that every visitor downloads.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 4. How a check works ----------------------------------------------------->
+<section class="section" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">How a check works</p>
+      <h2 id="how-title">We look. We don't touch.</h2>
+      <p class="lede">A free check sees only what any visitor's browser sees. Nothing is submitted, nothing is changed, and nothing needs your passwords.</p>
+    </div>
+
+    <ol class="flow">
+      <li class="step" data-reveal>
+        <div class="step-top">
+          <div class="icon"><svg viewBox="0 0 30 30" aria-hidden="true" focusable="false"><rect x="3.5" y="7" width="23" height="16" rx="3"/><path d="M3.5 9.5l11.5 7 11.5-7"/></svg></div>
+          <span class="num">01</span>
+        </div>
+        <h3>You send your website address</h3>
+        <p>By email. That's all we need for a free check.</p>
+      </li>
+      <li class="step" data-reveal>
+        <div class="step-top">
+          <div class="icon"><svg viewBox="0 0 30 30" aria-hidden="true" focusable="false"><rect x="3" y="5" width="24" height="20" rx="3"/><path d="M3 10.5h24"/><circle class="fill" cx="6.5" cy="7.8" r=".9"/><circle class="fill" cx="9.3" cy="7.8" r=".9"/><path class="i-scan" d="M7 17.5h16" stroke-opacity=".7"/></svg></div>
+          <span class="num">02</span>
+        </div>
+        <h3>We read only public pages, like a normal visitor</h3>
+        <p>A browser opens your public pages and follows your links. We also read your public DNS records and security certificate.</p>
+      </li>
+      <li class="step" data-reveal>
+        <div class="step-top">
+          <div class="icon"><svg viewBox="0 0 30 30" aria-hidden="true" focusable="false"><path d="M8 4.5h14v21H8z"/><path d="M11.5 10h7M11.5 14h7M11.5 18h4"/><path class="i-draw" d="M17 20l2 2 4-4.5"/></svg></div>
+          <span class="num">03</span>
+        </div>
+        <h3>We check against DPDP rules</h3>
+        <p>Written rules based on the DPDP Act, 2023 and the DPDP Rules, 2025. The same page always gives the same result.</p>
+      </li>
+      <li class="step" data-reveal>
+        <div class="step-top">
+          <div class="icon"><svg viewBox="0 0 30 30" aria-hidden="true" focusable="false"><path d="M8 3.5h10l5 5v18H8z"/><path d="M18 3.5v5h5"/><path class="i-bob" d="M11.5 15h8M11.5 19h8M11.5 23h5"/></svg></div>
+          <span class="num">04</span>
+        </div>
+        <h3>You get a plain-English PDF report</h3>
+        <p>What's wrong, why it matters, where we saw it, what's already fine, and what we couldn't see.</p>
+      </li>
+    </ol>
+
+    <ul class="badges" aria-label="What a free check never does">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.4l3.2 3.1L13 4.6"/></svg>No login</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.4l3.2 3.1L13 4.6"/></svg>No hacking or password guessing</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.4l3.2 3.1L13 4.6"/></svg>No forms submitted</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.4l3.2 3.1L13 4.6"/></svg>Nothing on your site is touched</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 5. Free vs detailed ------------------------------------------------------>
+<section class="section" id="reports" aria-labelledby="reports-title">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Two kinds of report</p>
+      <h2 id="reports-title">Start free. Go deeper only if you want to.</h2>
+    </div>
+
+    <div class="compare">
+      <article class="plan" data-reveal>
+        <span class="tag tag-good">Free sample report</span>
+        <h3>What anyone can see from outside</h3>
+        <p>The same view as any visitor to your site. No permission or access needed.</p>
+        <ul class="ticks">
+          <li>The problems we found, in plain English</li>
+          <li>Why each one matters under the DPDP Act</li>
+          <li>Where on your site we saw it</li>
+          <li>What's already fine</li>
+          <li>A possible penalty range, clearly marked as an estimate</li>
+          <li>What this check couldn't see</li>
+        </ul>
+        <a class="btn" href="mailto:shreeya@gazeveil.com?subject=Free%20sample%20report%20request&amp;body=Hi%20Shreeya%2C%0A%0APlease%20send%20a%20free%20sample%20report%20for%20this%20website%3A%20">Get a free sample report</a>
+      </article>
+
+      <article class="plan plan-feature" data-reveal>
+        <span class="tag tag-good">Detailed report</span>
+        <h3>Full fix steps and deeper checks</h3>
+        <p>Only with your signed, written permission, and only within what that permission allows.</p>
+        <ul class="ticks">
+          <li>Everything in the free report</li>
+          <li>Step-by-step fixes for every problem</li>
+          <li>Deeper checks a visitor can't make, such as hidden files on your server, your database's access settings and your file storage</li>
+          <li>A log of every action we took, when, and anything we skipped</li>
+        </ul>
+        <p class="fineprint">The permission names your site, the checks it allows and the dates it covers.</p>
+        <a class="btn btn-ghost" href="mailto:shreeya@gazeveil.com?subject=Detailed%20report%20enquiry">Ask about a detailed report</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Sample report preview -------------------------------------------------->
+<section class="section" id="sample" aria-labelledby="sample-title">
+  <div class="wrap sample">
+    <div data-reveal>
+      <p class="eyebrow">What you get</p>
+      <h2 id="sample-title" style="font-size:clamp(2rem,4.4vw,3.1rem)">A report your whole team can read</h2>
+      <p class="lede">No jargon and no section numbers on page one. Each problem says what's wrong, why it matters, and where we saw it.</p>
+      <p class="muted">The page on the right is a mock-up for “Example Store”, a made-up company. The numbers are blanked out on purpose.</p>
+    </div>
+
+    <div data-reveal>
+      <div class="zoom" data-zoom role="button" tabindex="0" aria-pressed="false"
+           aria-label="Sample report page for a made-up company, Example Store. Press to zoom in or out.">
+        <span class="ribbon" aria-hidden="true">SAMPLE</span>
+        <div class="sheet" aria-hidden="true">
+          <div class="s-brand">GAZEVEIL</div>
+          <p class="s-title">Privacy check for Example Store</p>
+          <div class="s-meta">Checked on <span class="redact" style="width:64px"></span> · <span class="redact" style="width:18px"></span> pages checked</div>
+          <div class="s-est">
+            <b>AN ESTIMATE, NOT A BILL</b>
+            <span class="redact" style="width:46%"></span>
+            <p>A possible penalty if nothing is fixed, based on what an Indian regulator fined companies in another sector.</p>
+          </div>
+          <h5>We found 3 problems</h5>
+          <ol>
+            <li><strong>Tracking tools start before visitors say yes.</strong><span>Tracking tools load the moment someone arrives.</span></li>
+            <li><strong>Your cookie pop-up has no “Reject” button.</strong><span>Visitors can accept, but have no equally easy way to say no.</span></li>
+            <li><strong>A tick box on one of your forms is already ticked.</strong><span>A box is ticked before the person touches it.</span></li>
+          </ol>
+          <div class="s-fine">
+            <b>What's already fine</b>
+            <span>✓ You have a privacy policy</span>
+            <span>✓ Your site uses a valid secure connection (https)</span>
+          </div>
+          <p class="s-legal">This report is not legal advice.</p>
+        </div>
+      </div>
+      <p class="zoom-hint"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14M7 5v4M5 7h4"/></svg>Hover to zoom, or tap on a phone.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. FAQ ------------------------------------------------------------------>
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="wrap narrow">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Questions</p>
+      <h2 id="faq-title">Straight answers</h2>
+    </div>
+    <div class="faq" data-reveal>
+      <details>
+        <summary>Is this legal advice?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="answer"><p>No. GazeVeil points out issues it can see on a public website. A report is a starting point for you, your developers and your lawyer, not a legal opinion.</p></div>
+      </details>
+      <details>
+        <summary>Do you need access to my systems?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="answer"><p>Not for the free report. It uses only what any visitor to your website can see. Deeper checks, in the detailed report, happen only with your signed, written permission and only within what it allows.</p></div>
+      </details>
+      <details>
+        <summary>What is the DPDP Act?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="answer"><p>The Digital Personal Data Protection Act, 2023 is India's law on how organisations handle people's personal data in digital form. It covers what you must tell people, when you need their consent, and how you must keep their data safe. The DPDP Rules, 2025 fill in the details.</p></div>
+      </details>
+      <details>
+        <summary>When does it apply?<span class="pm" aria-hidden="true"></span></summary>
+        <!-- CHECK DATE: the repo states only that penalties cannot start before 13 May 2027 (nazar/report/simple.py PENALTIES_BEGIN, nazar/estimation/calibration/penalty_bands.yaml). "Most duties apply from 2027" is not in the repo. -->
+        <div class="answer"><p>Penalties under the Act can't start before 13 May 2027. Most duties apply from 2027, so now is a good time to find and fix gaps.</p></div>
+      </details>
+      <details>
+        <summary>What do you do with personal data you see on my site?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="answer"><p>We record only the type of data and how many we saw, never the data itself. It is thrown away the moment it is recognised.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Call to action ------------------------------------------------------->
+<section class="cta dark" id="contact" aria-labelledby="cta-title">
+  <div class="wrap">
+    <img class="mark" src="assets/logo-mark.svg" alt="" width="74" height="74">
+    <h2 id="cta-title">Find out what your website shows the world.</h2>
+    <p>Send us your website address. We'll send back a free sample report in plain English.</p>
+    <a class="btn" href="mailto:shreeya@gazeveil.com?subject=Free%20sample%20report%20request&amp;body=Hi%20Shreeya%2C%0A%0APlease%20send%20a%20free%20sample%20report%20for%20this%20website%3A%20">Get a free sample report</a>
+    <span class="mail">or write to <a href="mailto:shreeya@gazeveil.com">shreeya@gazeveil.com</a></span>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="./" aria-label="GazeVeil home">
+        <img src="assets/logo-mark.svg" alt="" width="34" height="34">
+        <span>Gaze<span class="veil">Veil</span></span>
+      </a>
+      <p class="legal">GazeVeil points out issues it can see on a public website. It is not legal advice.</p>
+      <p class="where">Mumbai, India</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="method/">How we check</a></li>
+      <li><a href="#faq">Questions</a></li>
+      <li><a href="mailto:shreeya@gazeveil.com">shreeya@gazeveil.com</a></li>
+    </ul>
   </div>
 </footer>
 </body>

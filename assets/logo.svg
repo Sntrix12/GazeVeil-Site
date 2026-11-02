@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" width="300" height="64" role="img" aria-labelledby="gv-logo-title">
+  <title id="gv-logo-title">GazeVeil</title>
+  <style>
+    .word { fill: #e9eef3; font: 800 38px ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; letter-spacing: -1.2px; }
+    @media (prefers-color-scheme: light) { .word { fill: #0b1220; } }
+  </style>
+  <defs>
+    <radialGradient id="gvl-iris" cx="42%" cy="38%" r="70%">
+      <stop offset="0" stop-color="#a6fce3"/>
+      <stop offset=".45" stop-color="#3df0b8"/>
+      <stop offset="1" stop-color="#0e9f8a"/>
+    </radialGradient>
+    <linearGradient id="gvl-veil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#07090d" stop-opacity=".96"/>
+      <stop offset="1" stop-color="#07090d" stop-opacity=".3"/>
+    </linearGradient>
+    <linearGradient id="gvl-text" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3df0b8"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <clipPath id="gvl-eye"><path d="M5 32C16.5 14.5 47.5 14.5 59 32 47.5 49.5 16.5 49.5 5 32Z"/></clipPath>
+  </defs>
+  <g clip-path="url(#gvl-eye)">
+    <rect width="64" height="64" fill="#0b1118"/>
+    <circle cx="32" cy="33" r="11.5" fill="url(#gvl-iris)"/>
+    <circle cx="32" cy="33" r="4.8" fill="#04130e"/>
+    <circle cx="28.6" cy="29.4" r="1.9" fill="#fff" fill-opacity=".9"/>
+    <path d="M0 0H64V30.5H59C50 27 42 27.5 32 30.5C22 33.5 14 27 5 30.5H0Z" fill="url(#gvl-veil)"/>
+    <path d="M5 30.5C14 27 22 33.5 32 30.5S50 27 59 30.5" fill="none" stroke="#3df0b8" stroke-width="1.4" stroke-opacity=".9"/>
+  </g>
+  <path d="M5 32C16.5 14.5 47.5 14.5 59 32 47.5 49.5 16.5 49.5 5 32Z" fill="none" stroke="#3df0b8" stroke-width="3.2" stroke-linejoin="round"/>
+  <text x="76" y="45" class="word">Gaze<tspan fill="url(#gvl-text)">Veil</tspan></text>
+</svg>
