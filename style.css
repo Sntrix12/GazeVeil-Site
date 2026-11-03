@@ -411,6 +411,7 @@ ul, ol { margin: 0; }
   box-shadow: inset 0 0 0 1px var(--warn-line);
 }
 .plan .btn { margin-top: auto; align-self: flex-start; }
+.ticks .sub { display: block; color: var(--faint); font-size: .84rem; margin-top: .2rem; }
 .fineprint { color: var(--faint); font-size: .88rem; margin: -.75rem 0 1.25rem; }
 
 /* ---- sample report preview ---------------------------------------------- */
