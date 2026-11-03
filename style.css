@@ -381,8 +381,8 @@ ul, ol { margin: 0; }
 
 /* ---- free vs detailed --------------------------------------------------- */
 
-.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; align-items: stretch; }
-@media (max-width: 860px) { .compare { grid-template-columns: 1fr; } }
+.compare { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; align-items: stretch; }
+@media (max-width: 980px) { .compare { grid-template-columns: 1fr; } }
 .plan {
   position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: 22px;
   padding: clamp(1.5rem, 3.5vw, 2.25rem); display: flex; flex-direction: column;
